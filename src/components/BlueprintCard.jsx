@@ -38,6 +38,7 @@ const BlueprintCard = ({ blueprint, status = 'unknown', onClick, isOverview = fa
 
     const isOwned = status === 'owned';
 
+    let overviewGradient = 'none';
     if (isOverview && users.length > 0) {
 
         const degPerUser = 360 / users.length;
