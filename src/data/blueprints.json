@@ -1,0 +1,446 @@
+[
+  {
+    "id": "bp_bettina",
+    "name": "Bettina",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/a/ac/Bettina.png"
+  },
+  {
+    "id": "bp_blue_light_stick",
+    "name": "Blue Light Stick",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/c/cc/Blue_Light_Stick.png"
+  },
+  {
+    "id": "bp_aphelion",
+    "name": "Aphelion",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/8/88/Aphelion.png"
+  },
+  {
+    "id": "bp_combat_mk3_flank",
+    "name": "Combat Mk. 3 (Flanking)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/7/73/Combat_Mk._3_%28Flanking%29.png"
+  },
+  {
+    "id": "bp_combat_mk3_agg",
+    "name": "Combat Mk. 3 (Aggressive)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/a/a4/Combat_Mk._3_%28Aggressive%29.png"
+  },
+  {
+    "id": "bp_complex_gun_parts",
+    "name": "Complex Gun Parts",
+    "category": "Material",
+    "icon": "https://arcraiders.wiki/w/images/3/3d/Complex_Gun_Parts.png"
+  },
+  {
+    "id": "bp_fireworks_box",
+    "name": "Fireworks Box",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/0/0f/Fireworks_Box.png"
+  },
+  {
+    "id": "bp_gas_mine",
+    "name": "Gas Mine",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/c/ce/Gas_Mine.png"
+  },
+  {
+    "id": "bp_green_light_stick",
+    "name": "Green Light Stick",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/2/27/Green_Light_Stick.png"
+  },
+  {
+    "id": "bp_pulse_mine",
+    "name": "Pulse Mine",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/a/af/Pulse_Mine.png"
+  },
+  {
+    "id": "bp_seeker_grenade",
+    "name": "Seeker Grenade",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/3/35/Seeker_Grenade.png"
+  },
+  {
+    "id": "bp_looting_mk3_survivor",
+    "name": "Looting Mk. 3 (Survivor)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/7/74/Looting_Mk._3_%28Survivor%29.png"
+  },
+  {
+    "id": "bp_angled_grip_ii",
+    "name": "Angled Grip II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/2/2b/Angled_Grip_II.png"
+  },
+  {
+    "id": "bp_angled_grip_iii",
+    "name": "Angled Grip III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/0/0f/Angled_Grip_III.png"
+  },
+  {
+    "id": "bp_hullcracker",
+    "name": "Hullcracker",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/b/ba/Hullcracker-Level1.png"
+  },
+  {
+    "id": "bp_anvil",
+    "name": "Anvil",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/0/00/Anvil-Level1.png"
+  },
+  {
+    "id": "blank_1",
+    "isBlank": true
+  },
+  {
+    "id": "blank_2",
+    "isBlank": true
+  },
+  {
+    "id": "bp_barricade_kit",
+    "name": "Barricade Kit",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/c/cb/Barricade_Kit.png"
+  },
+  {
+    "id": "bp_blaze_grenade",
+    "name": "Blaze Grenade",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/2/24/Blaze_Grenade.png"
+  },
+  {
+    "id": "bp_bobcat",
+    "name": "Bobcat",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/3/36/Bobcat-Level1.png"
+  },
+  {
+    "id": "bp_osprey",
+    "name": "Osprey",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/a/ae/Osprey-Level1.png"
+  },
+  {
+    "id": "bp_burletta",
+    "name": "Burletta",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/d/d4/Burletta-Level1.png"
+  },
+  {
+    "id": "bp_compensator_ii",
+    "name": "Compensator II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/0/0a/Compensator_II.png"
+  },
+  {
+    "id": "bp_compensator_iii",
+    "name": "Compensator III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/a/af/Compensator_III.png"
+  },
+  {
+    "id": "bp_defibrillator",
+    "name": "Defibrillator",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/5/5f/Defibrillator.png"
+  },
+  {
+    "id": "blank_3",
+    "isBlank": true
+  },
+  {
+    "id": "bp_equalizer",
+    "name": "Equalizer",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/9/96/Equalizer.png"
+  },
+  {
+    "id": "bp_extended_barrel",
+    "name": "Extended Barrel",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/2/2f/Extended_Barrel.png"
+  },
+  {
+    "id": "bp_ext_light_mag_ii",
+    "name": "Extended Light Mag II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/c/cf/Extended_Light_Mag_II.png"
+  },
+  {
+    "id": "bp_ext_light_mag_iii",
+    "name": "Extended Light Mag III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/4/40/Extended_Light_Mag_III.png"
+  },
+  {
+    "id": "bp_ext_med_mag_ii",
+    "name": "Extended Medium Mag II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/5/50/Extended_Medium_Mag_II.png"
+  },
+  {
+    "id": "bp_ext_med_mag_iii",
+    "name": "Extended Medium Mag III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/a/a1/Extended_Medium_Mag_III.png"
+  },
+  {
+    "id": "bp_ext_shot_mag_ii",
+    "name": "Extended Shotgun Mag II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/4/4f/Extended_Shotgun_Mag_II.png"
+  },
+  {
+    "id": "bp_ext_shot_mag_iii",
+    "name": "Extended Shotgun Mag III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/7/77/Extended_Shotgun_Mag_III.png"
+  },
+  {
+    "id": "bp_remote_raider_flare",
+    "name": "Remote Raider Flare",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/f/ff/Remote_Raider_Flare.png"
+  },
+  {
+    "id": "bp_heavy_gun_parts",
+    "name": "Heavy Gun Parts",
+    "category": "Material",
+    "icon": "https://arcraiders.wiki/w/images/3/33/Heavy_Gun_Parts.png"
+  },
+  {
+    "id": "bp_venator",
+    "name": "Venator",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/b/b4/Venator-Level1.png"
+  },
+  {
+    "id": "bp_il_toro",
+    "name": "Il Toro",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/5/50/Il_Toro-Level1.png"
+  },
+  {
+    "id": "bp_jolt_mine",
+    "name": "Jolt Mine",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/5/5a/Jolt_Mine.png"
+  },
+  {
+    "id": "bp_explosive_mine",
+    "name": "Explosive Mine",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/2/22/Explosive_Mine.png"
+  },
+  {
+    "id": "bp_jupiter",
+    "name": "Jupiter",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/6/68/Jupiter.png"
+  },
+  {
+    "id": "bp_light_gun_parts",
+    "name": "Light Gun Parts",
+    "category": "Material",
+    "icon": "https://arcraiders.wiki/w/images/c/c9/Light_Gun_Parts.png"
+  },
+  {
+    "id": "bp_lightweight_stock",
+    "name": "Lightweight Stock",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/c/cb/Lightweight_Stock.png"
+  },
+  {
+    "id": "bp_lure_grenade",
+    "name": "Lure Grenade",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/7/77/Lure_Grenade.png"
+  },
+  {
+    "id": "bp_medium_gun_parts",
+    "name": "Medium Gun Parts",
+    "category": "Material",
+    "icon": "https://arcraiders.wiki/w/images/9/9a/Medium_Gun_Parts.png"
+  },
+  {
+    "id": "bp_torrente",
+    "name": "Torrente",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/1/1e/Torrente-Level1.png"
+  },
+  {
+    "id": "bp_muzzle_brake_ii",
+    "name": "Muzzle Brake II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/2/23/Muzzle_Brake_II.png"
+  },
+  {
+    "id": "bp_muzzle_brake_iii",
+    "name": "Muzzle Brake III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/a/a2/Muzzle_Brake_III.png"
+  },
+  {
+    "id": "bp_padded_stock",
+    "name": "Padded Stock",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/4/4b/Padded_Stock.png"
+  },
+  {
+    "id": "bp_shotgun_choke_ii",
+    "name": "Shotgun Choke II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/6/63/Shotgun_Choke_II.png"
+  },
+  {
+    "id": "bp_shotgun_choke_iii",
+    "name": "Shotgun Choke III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/3/36/Shotgun_Choke_III.png"
+  },
+  {
+    "id": "bp_shotgun_silencer",
+    "name": "Shotgun Silencer",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/4/4d/Shotgun_Silencer.png"
+  },
+  {
+    "id": "bp_showstopper",
+    "name": "Showstopper",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/1/18/Showstopper.png"
+  },
+  {
+    "id": "bp_silencer_i",
+    "name": "Silencer I",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/f/f7/Silencer_I.png"
+  },
+  {
+    "id": "bp_silencer_ii",
+    "name": "Silencer II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/c/c0/Silencer_II.png"
+  },
+  {
+    "id": "bp_snap_hook",
+    "name": "Snap Hook",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/5/56/Snap_Hook.png"
+  },
+  {
+    "id": "bp_stable_stock_ii",
+    "name": "Stable Stock II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/b/b4/Stable_Stock_II.png"
+  },
+  {
+    "id": "bp_stable_stock_iii",
+    "name": "Stable Stock III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/e/eb/Stable_Stock_III.png"
+  },
+  {
+    "id": "bp_tagging_grenade",
+    "name": "Tagging Grenade",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/e/e5/Tagging_Grenade.png"
+  },
+  {
+    "id": "bp_tempest",
+    "name": "Tempest",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/c/c9/Tempest-Level1.png"
+  },
+  {
+    "id": "bp_trigger_nade",
+    "name": "Trigger 'Nade",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/0/09/Trigger_Nade.png"
+  },
+  {
+    "id": "bp_vertical_grip_ii",
+    "name": "Vertical Grip II",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/3/3c/Vertical_Grip_II.png"
+  },
+  {
+    "id": "bp_vertical_grip_iii",
+    "name": "Vertical Grip III",
+    "category": "Mod",
+    "icon": "https://arcraiders.wiki/w/images/2/20/Vertical_Grip_III.png"
+  },
+  {
+    "id": "bp_vita_shot",
+    "name": "Vita Shot",
+    "category": "Consumable",
+    "icon": "https://arcraiders.wiki/w/images/7/7d/Vita_Shot.png"
+  },
+  {
+    "id": "bp_vita_spray",
+    "name": "Vita Spray",
+    "category": "Consumable",
+    "icon": "https://arcraiders.wiki/w/images/1/1d/Vita_Spray.png"
+  },
+  {
+    "id": "bp_vulcano",
+    "name": "Vulcano",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/d/da/Vulcano-Level1.png"
+  },
+  {
+    "id": "bp_wolfpack",
+    "name": "Wolfpack",
+    "category": "Weapon",
+    "icon": "https://arcraiders.wiki/w/images/2/24/Wolfpack.png"
+  },
+  {
+    "id": "bp_red_light_stick",
+    "name": "Red Light Stick",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/9/93/Red_Light_Stick.png"
+  },
+  {
+    "id": "bp_smoke_grenade",
+    "name": "Smoke Grenade",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/d/d5/Smoke_Grenade.png"
+  },
+  {
+    "id": "bp_deadline",
+    "name": "Deadline",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/c/c7/Deadline.png"
+  },
+  {
+    "id": "bp_trailblazer_grenade",
+    "name": "Trailblazer",
+    "category": "Explosive",
+    "icon": "https://arcraiders.wiki/w/images/8/89/Trailblazer.png"
+  },
+  {
+    "id": "bp_tactical_mk3_def",
+    "name": "Tactical Mk. 3 (Defensive)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/a/a9/Tactical_Mk._3_%28Defensive%29.png"
+  },
+  {
+    "id": "bp_tactical_mk3_heal",
+    "name": "Tactical Mk. 3 (Healing)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/1/12/Tactical_Mk._3_%28Healing%29.png"
+  },
+  {
+    "id": "bp_yellow_light_stick",
+    "name": "Yellow Light Stick",
+    "category": "Gadget",
+    "icon": "https://arcraiders.wiki/w/images/1/1f/Yellow_Light_Stick.png"
+  }
+]
