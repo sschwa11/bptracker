@@ -30,7 +30,15 @@ function App() {
 
   const sortedBlueprints = React.useMemo(() => {
     if (sortOrder === 'alphabetical') {
-      return [...blueprintsData].sort((a, b) => a.name.localeCompare(b.name));
+      return [...blueprintsData].sort((a, b) => {
+        if (a.isBlank && !b.isBlank) return 1;
+        if (!a.isBlank && b.isBlank) return -1;
+        if (a.isBlank && b.isBlank) return 0;
+
+        const nameA = a.name || '';
+        const nameB = b.name || '';
+        return nameA.localeCompare(nameB);
+      });
     }
     return blueprintsData;
   }, [sortOrder]);
@@ -208,19 +216,22 @@ function App() {
             </button>
           </div>
 
-          <div className="flex bg-gray-900 rounded p-1 gap-1">
-            <button
-              onClick={() => handleSortOrderChange('game')}
-              className={`px-3 py-1 text-xs font-bold rounded transition-colors ${sortOrder === 'game' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
-            >
-              GAME ORDER
-            </button>
-            <button
-              onClick={() => handleSortOrderChange('alphabetical')}
-              className={`px-3 py-1 text-xs font-bold rounded transition-colors ${sortOrder === 'alphabetical' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
-            >
-              A-Z
-            </button>
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-500">Sort:</span>
+            <div className="flex bg-gray-900 rounded p-1 gap-1">
+              <button
+                onClick={() => handleSortOrderChange('game')}
+                className={`px-3 py-1 text-xs font-bold rounded transition-colors ${sortOrder === 'game' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
+              >
+                IN-GAME
+              </button>
+              <button
+                onClick={() => handleSortOrderChange('alphabetical')}
+                className={`px-3 py-1 text-xs font-bold rounded transition-colors ${sortOrder === 'alphabetical' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'}`}
+              >
+                A-Z
+              </button>
+            </div>
           </div>
         </div>
 
