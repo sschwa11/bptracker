@@ -22,6 +22,8 @@ function App() {
   const [showNames, setShowNames] = useState(() => {
     return localStorage.getItem('bptracker_showNames') === 'true';
   });
+  const [showSetupModal, setShowSetupModal] = useState(false);
+  const [setupNewUserName, setSetupNewUserName] = useState('');
 
   const handleUserFilter = (username) => {
     if (filteredUser === username) {
@@ -112,12 +114,17 @@ function App() {
 
     setUsers(loadedUsers);
 
+    const defaultUser = localStorage.getItem('bptracker_defaultUser');
 
-    if (currentUser && !loadedUsers.find(u => u.name === currentUser)) {
+    if (defaultUser && loadedUsers.find(u => u.name === defaultUser)) {
+      setCurrentUser(defaultUser);
+      setViewMode('individual');
+    } else if (!defaultUser && loadedUsers.length > 0) {
+      setShowSetupModal(true);
+    } else if (currentUser && !loadedUsers.find(u => u.name === currentUser)) {
       setCurrentUser(null);
-    } else if (!currentUser && loadedUsers.length > 0) {
-      setCurrentUser(loadedUsers[0].name);
     }
+
     setLoading(false);
   };
 
@@ -128,13 +135,42 @@ function App() {
     try {
       await addUser(newUserName);
       await loadData();
-      setCurrentUser(newUserName);
       setNewUserName('');
-      setIsManageMode(false);
     } catch (err) {
       setError('Failed to add user');
     }
     setLoading(false);
+  };
+
+  const handleSetupSelectUser = (username) => {
+    localStorage.setItem('bptracker_defaultUser', username);
+    setCurrentUser(username);
+    setViewMode('individual');
+    setShowSetupModal(false);
+  };
+
+  const handleSetupAddNewUser = async (e) => {
+    e.preventDefault();
+    if (!setupNewUserName.trim()) return;
+    setLoading(true);
+    try {
+      await addUser(setupNewUserName);
+      await loadData();
+      localStorage.setItem('bptracker_defaultUser', setupNewUserName);
+      setCurrentUser(setupNewUserName);
+      setViewMode('individual');
+      setShowSetupModal(false);
+      setSetupNewUserName('');
+    } catch (err) {
+      setError('Failed to add user');
+    }
+    setLoading(false);
+  };
+
+  const handleChangeDefaultUser = () => {
+    if (!currentUser) return;
+    localStorage.setItem('bptracker_defaultUser', currentUser);
+    alert(`${currentUser} is now your default raider`);
   };
 
   const handleRemoveUser = async (name) => {
@@ -291,6 +327,15 @@ function App() {
           >
             {isManageMode ? 'Done' : 'Manage'}
           </button>
+          {currentUser && (
+            <button
+              onClick={handleChangeDefaultUser}
+              className="text-gray-400 hover:text-white text-sm underline"
+              title="Set this raider as your default"
+            >
+              Set as Default
+            </button>
+          )}
         </div>
       </header>
 
@@ -447,6 +492,52 @@ function App() {
       {loading && (
         <div className="absolute top-0 left-0 w-full h-1 bg-transparent overflow-hidden z-50">
           <div className="h-full bg-arc-red animate-pulse w-1/3 mx-auto"></div>
+        </div>
+      )}
+
+      {showSetupModal && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="bg-[#1a1a1a] border border-gray-700 rounded-lg p-6 max-w-md w-full">
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              <span className="text-arc-red">Welcome to </span>
+              <span className="text-white">BPTracker</span>
+            </h2>
+            <p className="text-gray-400 text-sm mb-6 text-center">
+              Select your raider name from the list below, or add yourself if you're not listed.
+            </p>
+
+            <div className="space-y-2 mb-6 max-h-60 overflow-y-auto">
+              {users.map(u => (
+                <button
+                  key={u.name}
+                  onClick={() => handleSetupSelectUser(u.name)}
+                  className="w-full px-4 py-3 bg-gray-800 hover:bg-gray-700 rounded text-left transition-colors border border-gray-700 hover:border-gray-600"
+                  style={{ borderLeftColor: u.color, borderLeftWidth: '4px' }}
+                >
+                  {u.name}
+                </button>
+              ))}
+            </div>
+
+            <div className="border-t border-gray-700 pt-4">
+              <p className="text-gray-400 text-xs mb-2">Not on the list?</p>
+              <form onSubmit={handleSetupAddNewUser} className="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Your raider name"
+                  className="flex-1 bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:border-arc-red"
+                  value={setupNewUserName}
+                  onChange={(e) => setSetupNewUserName(e.target.value)}
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-arc-red hover:bg-red-600 rounded text-sm font-bold transition-colors"
+                >
+                  Add Me
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       )}
     </div>
