@@ -1,7 +1,7 @@
 import React from 'react';
 import BlueprintCard from './BlueprintCard';
 
-const BlueprintGrid = ({ blueprints, userBlueprints = {}, onToggleBlueprint, isOverview = false, users = [], filteredUser = null, overviewMode = 'missing' }) => {
+const BlueprintGrid = ({ blueprints, userBlueprints = {}, onToggleBlueprint, isOverview = false, users = [], filteredUser = null, overviewMode = 'missing', individualMode = 'missing', showNames = false }) => {
     return (
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 p-4">
             {blueprints.map((bp) => (
@@ -14,6 +14,8 @@ const BlueprintGrid = ({ blueprints, userBlueprints = {}, onToggleBlueprint, isO
                     users={users}
                     filteredUser={filteredUser}
                     overviewMode={overviewMode}
+                    individualMode={individualMode}
+                    showName={showNames}
                 />
             ))}
         </div>

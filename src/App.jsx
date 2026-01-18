@@ -10,9 +10,17 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [viewMode, setViewMode] = useState('overview');
   const [filteredUser, setFilteredUser] = useState(null);
-  const [overviewMode, setOverviewMode] = useState('missing');
+  const [overviewMode, setOverviewMode] = useState(() => {
+    return localStorage.getItem('bptracker_overviewMode') || 'missing';
+  });
+  const [individualMode, setIndividualMode] = useState(() => {
+    return localStorage.getItem('bptracker_individualMode') || 'missing';
+  });
   const [sortOrder, setSortOrder] = useState(() => {
     return localStorage.getItem('bptracker_sortOrder') || 'game';
+  });
+  const [showNames, setShowNames] = useState(() => {
+    return localStorage.getItem('bptracker_showNames') === 'true';
   });
 
   const handleUserFilter = (username) => {
@@ -26,6 +34,22 @@ function App() {
   const handleSortOrderChange = (order) => {
     setSortOrder(order);
     localStorage.setItem('bptracker_sortOrder', order);
+  };
+
+  const handleOverviewModeChange = (mode) => {
+    setOverviewMode(mode);
+    localStorage.setItem('bptracker_overviewMode', mode);
+  };
+
+  const handleIndividualModeChange = (mode) => {
+    setIndividualMode(mode);
+    localStorage.setItem('bptracker_individualMode', mode);
+  };
+
+  const handleShowNamesToggle = () => {
+    const newValue = !showNames;
+    setShowNames(newValue);
+    localStorage.setItem('bptracker_showNames', newValue.toString());
   };
 
   const sortedBlueprints = React.useMemo(() => {
@@ -233,6 +257,16 @@ function App() {
               </button>
             </div>
           </div>
+
+          <label className="flex items-center gap-2 text-xs text-gray-400 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showNames}
+              onChange={handleShowNamesToggle}
+              className="rounded bg-gray-800 border-gray-700"
+            />
+            Show Names
+          </label>
         </div>
 
         <div className="flex items-center gap-4">
@@ -312,13 +346,13 @@ function App() {
                   </h2>
                   <div className="flex bg-gray-900 rounded p-0.5">
                     <button
-                      onClick={() => setOverviewMode('missing')}
+                      onClick={() => handleOverviewModeChange('missing')}
                       className={`px-2 py-0.5 text-xs font-bold rounded transition-colors ${overviewMode === 'missing' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-400'}`}
                     >
                       MISSING
                     </button>
                     <button
-                      onClick={() => setOverviewMode('owned')}
+                      onClick={() => handleOverviewModeChange('owned')}
                       className={`px-2 py-0.5 text-xs font-bold rounded transition-colors ${overviewMode === 'owned' ? 'bg-arc-green text-black' : 'text-gray-500 hover:text-gray-400'}`}
                     >
                       OWNED
@@ -351,11 +385,24 @@ function App() {
                 className={`col-start-1 row-start-1 flex flex-col gap-2 transition-opacity duration-200 ${viewMode === 'individual' ? 'opacity-100 relative z-10' : 'opacity-0 invisible pointer-events-none'}`}
               >
                 <div className="flex items-center justify-between px-4">
-                  <h2 className="text-lg font-bold text-gray-300">
-                    {currentUser}'s Collection
-                  </h2>
-                  <div className="flex gap-4 text-xs text-gray-500">
-                    <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-arc-green"></div> Owned</span>
+                  <div className="flex items-baseline gap-4">
+                    <h2 className="text-lg font-bold text-gray-300">
+                      {currentUser}'s Collection
+                    </h2>
+                    <div className="flex bg-gray-900 rounded p-0.5">
+                      <button
+                        onClick={() => handleIndividualModeChange('missing')}
+                        className={`px-2 py-0.5 text-xs font-bold rounded transition-colors ${individualMode === 'missing' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-400'}`}
+                      >
+                        MISSING
+                      </button>
+                      <button
+                        onClick={() => handleIndividualModeChange('owned')}
+                        className={`px-2 py-0.5 text-xs font-bold rounded transition-colors ${individualMode === 'owned' ? 'bg-arc-green text-black' : 'text-gray-500 hover:text-gray-400'}`}
+                      >
+                        OWNED
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -389,6 +436,8 @@ function App() {
               userBlueprints={viewMode === 'individual' ? currentUserData?.blueprints : undefined}
               filteredUser={filteredUser}
               overviewMode={overviewMode}
+              individualMode={individualMode}
+              showNames={showNames}
               onToggleBlueprint={viewMode === 'individual' ? handleToggleBlueprint : () => { }}
             />
           </div>
