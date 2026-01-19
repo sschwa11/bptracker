@@ -546,7 +546,7 @@ function App() {
 
             <button
               onClick={() => setShowSetupModal(false)}
-              className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm text-gray-400 hover:text-white transition-colors"
+              className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm text-gray-400 hover:text-white transition-colors mt-4"
             >
               Skip for Now
             </button>
