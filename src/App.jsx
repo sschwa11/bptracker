@@ -4,7 +4,6 @@ import { fetchUsers, addUser, removeUser, updateBlueprintStatus, setAllBlueprint
 import blueprintsData from './data/blueprints.json';
 
 function App() {
-  // ... inside App component ...
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -358,7 +357,7 @@ function App() {
             <form onSubmit={handleAddUser} className="flex gap-2">
               <input
                 type="text"
-                placeholder="New Raider Name"
+                placeholder="New Player"
                 className="flex-1 bg-black border border-gray-700 rounded px-3 py-2 text-sm"
                 value={newUserName}
                 onChange={(e) => setNewUserName(e.target.value)}
@@ -503,7 +502,7 @@ function App() {
               <span className="text-white">BPTracker</span>
             </h2>
             <p className="text-gray-400 text-sm mb-6 text-center">
-              Select your raider name from the list below, or add yourself if you're not listed.
+              Select your name from the list below, or add yourself if you're not listed.
             </p>
 
             <div className="space-y-2 mb-6 max-h-60 overflow-y-auto">
@@ -524,7 +523,7 @@ function App() {
               <form onSubmit={handleSetupAddNewUser} className="flex gap-2">
                 <input
                   type="text"
-                  placeholder="Your raider name"
+                  placeholder="Your Name"
                   className="flex-1 bg-black border border-gray-700 rounded px-3 py-2 text-sm focus:outline-none focus:border-arc-red"
                   value={setupNewUserName}
                   onChange={(e) => setSetupNewUserName(e.target.value)}
