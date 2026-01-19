@@ -496,7 +496,14 @@ function App() {
 
       {showSetupModal && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="bg-[#1a1a1a] border border-gray-700 rounded-lg p-6 max-w-md w-full">
+          <div className="bg-[#1a1a1a] border border-gray-700 rounded-lg p-6 max-w-md w-full relative">
+            <button
+              onClick={() => setShowSetupModal(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+              title="Close"
+            >
+              ×
+            </button>
             <h2 className="text-2xl font-bold mb-4 text-center">
               <span className="text-arc-red">Welcome to </span>
               <span className="text-white">BPTracker</span>
@@ -536,6 +543,13 @@ function App() {
                 </button>
               </form>
             </div>
+
+            <button
+              onClick={() => setShowSetupModal(false)}
+              className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Skip for Now
+            </button>
           </div>
         </div>
       )}
