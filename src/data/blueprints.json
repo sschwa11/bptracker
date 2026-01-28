@@ -258,6 +258,12 @@
     "icon": "https://arcraiders.wiki/w/images/c/cb/Lightweight_Stock.png"
   },
   {
+    "id": "bp_looting_mk3_safekeeper",
+    "name": "Looting Mk. 3 (Safekeeper)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/7/74/Looting_Mk._3_%28Survivor%29.png"
+  },
+  {
     "id": "bp_lure_grenade",
     "name": "Lure Grenade",
     "category": "Explosive",
@@ -412,6 +418,12 @@
     "name": "Smoke Grenade",
     "category": "Explosive",
     "icon": "https://arcraiders.wiki/w/images/d/d5/Smoke_Grenade.png"
+  },
+  {
+    "id": "bp_tactical_mk3_revival",
+    "name": "Tactical Mk. 3 (Revival)",
+    "category": "Equipment",
+    "icon": "https://arcraiders.wiki/w/images/1/12/Tactical_Mk._3_%28Healing%29.png"
   },
   {
     "id": "bp_deadline",
