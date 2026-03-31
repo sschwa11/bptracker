@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) UNIQUE NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS user_blueprints (
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  blueprint_id VARCHAR(100) NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'owned',
+  PRIMARY KEY (user_id, blueprint_id)
+);

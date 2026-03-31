@@ -4,3 +4,5 @@ dist
 .DS_Store
 *.log
 coverage
+server/node_modules
+server/.env

@@ -23,4 +23,8 @@ jobs:
             git pull origin main
             npm install
             npm run build
+            cd server
+            npm install
+            cd ..
+            sudo systemctl restart bptracker
             sudo systemctl restart nginx

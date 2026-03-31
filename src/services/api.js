@@ -8,7 +8,7 @@ export const fetchUsers = async () => {
         return { users: [] };
     }
     try {
-        const response = await axios.get(API_URL);
+        const response = await axios.get(`${API_URL}/api/users`);
         return response.data;
     } catch (error) {
         console.error('Error fetching users:', error);
@@ -19,9 +19,7 @@ export const fetchUsers = async () => {
 export const addUser = async (name) => {
     if (!API_URL) return;
     try {
-        await axios.post(API_URL, JSON.stringify({ action: 'addUser', name }), {
-            headers: { 'Content-Type': 'text/plain' }
-        });
+        await axios.post(`${API_URL}/api/users`, { name });
     } catch (error) {
         console.error('Error adding user:', error);
         throw error;
@@ -31,9 +29,7 @@ export const addUser = async (name) => {
 export const removeUser = async (name) => {
     if (!API_URL) return;
     try {
-        await axios.post(API_URL, JSON.stringify({ action: 'removeUser', name }), {
-            headers: { 'Content-Type': 'text/plain' }
-        });
+        await axios.delete(`${API_URL}/api/users/${encodeURIComponent(name)}`);
     } catch (error) {
         console.error('Error removing user:', error);
         throw error;
@@ -43,13 +39,10 @@ export const removeUser = async (name) => {
 export const updateBlueprintStatus = async (userName, blueprintId, status) => {
     if (!API_URL) return;
     try {
-        await axios.post(API_URL, JSON.stringify({
-            action: 'updateBlueprint',
+        await axios.post(`${API_URL}/api/blueprints`, {
             name: userName,
             blueprintId,
             status
-        }), {
-            headers: { 'Content-Type': 'text/plain' }
         });
     } catch (error) {
         console.error('Error updating blueprint:', error);
@@ -60,12 +53,9 @@ export const updateBlueprintStatus = async (userName, blueprintId, status) => {
 export const setAllBlueprintsStatus = async (userName, status) => {
     if (!API_URL) return;
     try {
-        await axios.post(API_URL, JSON.stringify({
-            action: 'setAll',
+        await axios.post(`${API_URL}/api/blueprints/all`, {
             name: userName,
             status
-        }), {
-            headers: { 'Content-Type': 'text/plain' }
         });
     } catch (error) {
         console.error('Error bulk updating:', error);
