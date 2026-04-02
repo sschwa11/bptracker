@@ -454,5 +454,23 @@
     "name": "Yellow Light Stick",
     "category": "Gadget",
     "icon": "https://arcraiders.wiki/w/images/1/1f/Yellow_Light_Stick.png"
+  },
+  {
+    "id": "bp_canto",
+    "name": "Canto",
+    "category": "Weapon",
+    "nyi": true
+  },
+  {
+    "id": "bp_dolabra",
+    "name": "Dolabra",
+    "category": "Weapon",
+    "nyi": true
+  },
+  {
+    "id": "bp_surge_coil",
+    "name": "Surge Coil",
+    "category": "Gadget",
+    "nyi": true
   }
 ]

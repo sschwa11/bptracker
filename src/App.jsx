@@ -64,6 +64,33 @@ function App() {
         const nameB = b.name || '';
         return nameA.localeCompare(nameB);
       });
+    } else if (sortOrder === 'game') {
+      const catWeight = {
+        'Weapon': 1,
+        'Mod': 2,
+        'Gadget': 3,
+        'Explosive': 4,
+        'Consumable': 5,
+        'Equipment': 6,
+        'Material': 7
+      };
+      
+      return [...blueprintsData].sort((a, b) => {
+        if (a.isBlank && !b.isBlank) return 1;
+        if (!a.isBlank && b.isBlank) return -1;
+        if (a.isBlank && b.isBlank) return 0;
+        
+        const weightA = catWeight[a.category] || 99;
+        const weightB = catWeight[b.category] || 99;
+        
+        if (weightA !== weightB) {
+          return weightA - weightB;
+        }
+        
+        const nameA = a.name || '';
+        const nameB = b.name || '';
+        return nameA.localeCompare(nameB);
+      });
     }
     return blueprintsData;
   }, [sortOrder]);
